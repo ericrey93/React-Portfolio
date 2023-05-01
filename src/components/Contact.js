@@ -1,6 +1,8 @@
 import React from "react";
 
-const handleBtn = (e) => {
-    e.preventDefault;
-    
+
+function Contact() {
+    return
 }
+
+export default Contact;

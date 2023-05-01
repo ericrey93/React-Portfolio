@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Home from './components/Home';
+import Project from './components/Project';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+const [currentPage, setCurrentPage] = useState('Home');
+
+const changingPage = () => {
+  if(currentPage === 'Home') {
+    return <Home />;
+  } if (currentPage === 'Project') {
+    return <Project />;
+  } if (currentPage === 'Resume') {
+    return <Resume />;
+  } return <Contact />
+};
+
+const handleChange = (page) => setCurrentPage(page);
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main-page'>
+      <Header currentPage={currentPage} handleChange={handleChange} />
+      {changingPage()}
+
+      <Footer />
     </div>
   );
 }

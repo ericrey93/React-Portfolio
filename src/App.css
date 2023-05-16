@@ -28,6 +28,12 @@
   color: white;
   font-family: 'Chivo Mono', monospace;
 }
+.content {
+  font-size: 30px;
+  color: green;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 
 .nav-item:hover {
   color: black;

@@ -2,7 +2,11 @@ import React from "react";
 
 
 function Resume() {
-    return
+    return (
+        <div>
+            
+        </div>
+    )
 }
 
 export default Resume;

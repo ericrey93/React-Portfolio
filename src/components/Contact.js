@@ -1,5 +1,6 @@
 import React from "react";
 import emailjs from 'emailjs-com';
+import ContactText from "./ContactText";
 
 function Contact() {
 
@@ -18,6 +19,8 @@ function Contact() {
 
     return (
         <form onSubmit={sendEmail}>
+            <ContactText />
+
             <label className="contact">Name</label>
         <input className="input-info" type='text' name="from_name" style={{alignItems: 'center'}} />
         <label className="contact">Email</label>
